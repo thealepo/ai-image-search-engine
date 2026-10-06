@@ -6,6 +6,8 @@ Sentence Transformers model and Gradio. The included collection contains 398
 freely licensed images with source and attribution details in
 [`image_database/metadata.csv`](image_database/metadata.csv).
 
+<img width="2060" height="1155" alt="Image" src="https://github.com/user-attachments/assets/8dcd23cc-3f69-4166-a28f-b4cbfaaef2d0" />
+
 ## How it works
 
 At startup, the application:
@@ -38,48 +40,6 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 python app.py
 ```
-
-Open <http://127.0.0.1:7860>. Initial startup can take a few minutes while the
-model downloads and the 398 images are embedded.
-
-Useful options:
-
-```bash
-python app.py --help
-python app.py --device cpu
-python app.py --host 0.0.0.0 --port 8080
-python app.py --image-dir /path/to/other/images
-python app.py --share
-```
-
-The custom image directory may contain JPEG, PNG, WebP, or BMP files and is
-searched recursively. Unreadable files are skipped with a warning.
-
-## Google Colab
-
-Run these commands in a Colab cell after cloning the repository:
-
-```python
-%cd /content/ai-image-search-engine
-%pip install -q -r requirements.txt
-!python app.py --share
-```
-
-Gradio prints a temporary public URL. The Python application replaces the
-notebook's global state while preserving its search behavior.
-
-## Test
-
-Tests use a deterministic stand-in model, so they do not need network access or
-a CLIP download. They also verify that all included images decode successfully
-and correspond exactly to the metadata.
-
-```bash
-pip install -r requirements-dev.txt
-pytest -q
-```
-
-GitHub Actions runs the same suite for every push and pull request.
 
 ## Project layout
 
