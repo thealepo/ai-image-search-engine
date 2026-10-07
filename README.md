@@ -57,3 +57,8 @@ tests/                    Unit and dataset integrity tests
 See [`image_database/README.md`](image_database/README.md) for provenance,
 licenses, attribution requirements, preprocessing details, and model caveats.
 CLIP results are wording-dependent and may reflect biases in its training data.
+
+## Resources
+
+- Colab Notebook: https://colab.research.google.com/drive/1TDNJ_PNq793HlyJQXMhYtL3hHIMGPip_?usp=sharing
+- Canva Slides: https://canva.link/tn13wnjnotqcvqr
